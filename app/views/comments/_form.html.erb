@@ -1,0 +1,13 @@
+<%= form_with model: [post, comment], local: true, class: "space-y-3" do |f| %>
+
+  <div>
+    <%= f.text_area :body, placeholder: "Add a comment...", rows: 3,
+      class: "w-full rounded-lg border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 outline-none" %>
+  </div>
+
+  <div>
+    <%= f.submit "Post Comment",
+      class: "w-full sm:w-auto bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold px-4 py-2 rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-200 cursor-pointer" %>
+  </div>
+
+<% end %>

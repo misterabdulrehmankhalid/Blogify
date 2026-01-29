@@ -1,0 +1,22 @@
+<main class="min-h-screen bg-gray-50 flex-grow flex justify-center items-start py-12 px-4">
+  <% content_for :title, "Editing Post" %>
+
+  <div class="w-full lg:w-3/4 xl:w-2/3 2xl:w-1/2 bg-white shadow-xl rounded-3xl p-10">
+
+
+    <h1 class="text-4xl font-extrabold text-gray-800 mb-8 text-center lg:text-left">
+      Edit Post
+    </h1>
+
+    <%= render "form", post: @post %>
+
+    <div class="flex flex-col sm:flex-row justify-center sm:justify-start gap-4 mt-8">
+      <%= link_to "Show Post", @post,
+                  class: "w-full sm:w-auto text-center rounded-xl px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold shadow-lg transition transform hover:scale-[1.02]" %>
+
+      <%= link_to "Back to Posts", posts_path,
+                  class: "w-full sm:w-auto text-center rounded-xl px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold shadow transition transform hover:scale-[1.02]" %>
+    </div>
+
+  </div>
+</main>

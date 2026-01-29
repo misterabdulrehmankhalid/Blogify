@@ -1,0 +1,19 @@
+<main class="flex-grow">
+  <%= render "shared/navbar" %>
+
+  <% content_for :title, @post.new_record? ? "New Post" : "Edit Post" %>
+
+  <div class="max-w-3xl mx-auto mt-10">
+    <h1 class="text-3xl font-bold mb-6">
+      <%= @post.new_record? ? "Create a New Post" : "Edit Post" %>
+    </h1>
+
+    <%= render "form", post: @post %>
+
+    <div class="mt-4">
+      <%= link_to "Back to Posts",
+        posts_path,
+        class: "inline-block text-indigo-600 hover:text-indigo-500 font-medium" %>
+    </div>
+  </div>
+</main>

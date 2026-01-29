@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= content_for(:title) || "BLOGIFY" %></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= yield :head %>
+
+<!--  <link rel="icon" href="/icon.png" type="image/png">-->
+<!--  <link rel="icon" href="/icon.svg" type="image/svg+xml">-->
+<!--  <link rel="apple-touch-icon" href="/icon.png">-->
+  <%= favicon_link_tag 'mylogo.png' %>
+
+  <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+
+<body class="min-h-screen flex flex-col font-sans">
+
+
+  <%= yield %>
+
+  <footer class="mt-16 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-8 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-xl font-semibold mb-2">Blogify Blogs</h2>
+
+      <p class="text-white/80 text-sm mb-4">
+        Inspiring thoughts, ideas, and insights — stay updated with our latest posts.
+      </p>
+
+      <p class="text-white/50 text-xs">
+        &copy; 2026 BLOGIFY Application. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+
+</body>
+</html>
